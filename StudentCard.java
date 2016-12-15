@@ -13,6 +13,10 @@ public class StudentCard {
     studentCardList_.add(this);
   }
 
+  public String getStudentName() {
+    return this.studentName;
+  }
+
   public void setAccountBalance(int balance) {
     this.accountBalance = balance;
   }
