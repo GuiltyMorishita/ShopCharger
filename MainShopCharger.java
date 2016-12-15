@@ -6,4 +6,10 @@ public class MainShopCharger {
   public void insertStudentCard(StudentCard studentCard) {
     this.insertedStudentCard = studentCard;
 	}
+
+  public void chargeMoney(int chargeAmount) {
+    int currentAmount = this.insertedStudentCard.getAccountBalance();
+    int totalAmount = currentAmount + chargeAmount;
+    this.insertedStudentCard.setAccountBalance(totalAmount);
+  }
 }
