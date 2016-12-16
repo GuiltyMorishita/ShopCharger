@@ -3,11 +3,11 @@ import java.util.*;
 public class MainShopCharger {
     private StudentCard insertedStudentCard;
 
-    public void insertStudentCard(StudentCard studentCard) {
+    private void insertStudentCard(StudentCard studentCard) {
         this.insertedStudentCard = studentCard;
     }
 
-    public void chargeMoney(int chargeAmount) {
+    private void chargeMoney(int chargeAmount) {
         if (this.insertedStudentCard != null) {
             int currentAmount = this.insertedStudentCard.getAccountBalance();
             int totalAmount = currentAmount + chargeAmount;
@@ -18,7 +18,7 @@ public class MainShopCharger {
         }
     }
 
-    public void printAccountBalance() {
+    private void printAccountBalance() {
         if (this.insertedStudentCard != null) {
             System.out.format("学生名\t: %s\n残高\t: %s\n",
             insertedStudentCard.getStudentName(),
